@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     SampleClass2 sampleClass2;
 
+    @Inject
+    SomeInterfaceImpl someInterface;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         dosmthing.soSmthing();
         Log.d("Test123","Second Method");
         sampleClass2.printSomeMessage();
+
+        Log.d("Test123",someInterface.getAString());
     }
 
 }
